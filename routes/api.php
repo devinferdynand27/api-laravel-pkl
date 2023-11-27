@@ -9,6 +9,7 @@
     use App\Http\Controllers\TbHariController;
     use App\Http\Controllers\TbPengumpulanController;
     use App\Http\Controllers\TbTugasSiswaController;
+    use App\Http\Controllers\TbAbsensiController;
     /*
     |--------------------------------------------------------------------------
     | API Routes
@@ -113,4 +114,20 @@
         TbPengumpulanController::class,
         'filter_pengerjaan',
     ]);
+
+    Route::post('/user/absensi', [
+        TbAbsensiController::class,
+        'store',
+    ]);
+    Route::get('/user/absensi/get', [
+        TbAbsensiController::class,
+        'index',
+    ]);
+
+    Route::get('/images/{filename}', [
+        TbAbsensiController::class,
+        'showImage',
+    ]);
+
+
 

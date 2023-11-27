@@ -22,7 +22,6 @@ class HariSeeder extends Seeder
             ['hari' => 'Kamis'],
             ['hari' => 'Jumat'],
             ['hari' => 'Sabtu']
-
         ]);
     }
 }
